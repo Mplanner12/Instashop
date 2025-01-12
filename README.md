@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InstaShop
 
-## Getting Started
+InstaShop is a platform that allows users to create, manage, and showcase products. It provides a seamless experience for social media vendors to list their products, manage inventory, and reach millions of shoppers.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Product Creation**: Easily create and manage products with detailed descriptions, pricing, and images.
+- **Product Listing**: View a list of all created products with options to edit and manage them.
+- **Inventory Management**: Keep track of inventory stocks and variations such as color, size, and material.
+- **Shipping Options**: Choose between self-shipping and InstaShop shipping options.
+- **User-Friendly Interface**: A clean and intuitive interface for a seamless user experience.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Next.js**: A React framework for server-side rendering and generating static websites.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **React Icons**: A collection of popular icons for React applications.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/instashop.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd instashop
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000`.
+
+## Project Structure
+
+```
+instashop/
+├── public/
+│   ├── prod-img.png
+│   └── sale-img.png
+├── src/
+│   ├── app/
+│   │   ├── edit-product-details/
+│   │   │   └── page.tsx
+│   │   ├── product-list/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   └── Loader.tsx
+│   └── styles/
+│       └── globals.css
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Creating a Product
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Navigate to the product creation page.
+2. Fill in the product details such as title, description, price, and inventory stocks.
+3. Upload product images.
+4. Choose shipping options.
+5. Click "Save" to create the product.
 
-## Learn More
+### Viewing Product List
 
-To learn more about Next.js, take a look at the following resources:
+1. Navigate to the product list page.
+2. View all created products with their details.
+3. Click on a product to edit its details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Editing a Product
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Navigate to the product list page.
+2. Click on the product you want to edit.
+3. Update the product details as needed.
+4. Click "Save" to apply the changes.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please follow these steps to contribute:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes.
+4. Push your branch to your fork.
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For any questions or inquiries, please contact [almussanplanner12@gmail.com](mailto:almussanplanner12@gmail.com).

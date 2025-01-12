@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Loader from "@/utils/Loader";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const StoreForm = () => {

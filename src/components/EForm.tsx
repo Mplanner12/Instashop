@@ -50,7 +50,7 @@ const EForm = ({ nextStage }: { nextStage: () => void }) => {
         </div>
 
         <button
-          className="w-full px-4 py-3 mt-8 relative top-[31rem] text-white bg-[#8A226F] rounded-full hover:bg-purple-700 focus:ring-2 focus:ring-[#8A226F] focus:outline-none"
+          className="w-full px-4 py-3 mt-8 relative top-[27.5rem] text-white bg-[#8A226F] rounded-full hover:bg-purple-700 focus:ring-2 focus:ring-[#8A226F] focus:outline-none"
           type="button"
           onClick={handleSubmit}
         >

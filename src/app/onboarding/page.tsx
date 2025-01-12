@@ -11,7 +11,7 @@ const Page: React.FC = () => {
   const prevStage = () => setFormStage((prev) => (prev >= 1 ? prev - 1 : prev));
 
   return (
-    <div className="flex items-center justify-start h-screen px-4 bg-white">
+    <div className="flex items-center lg:w-full justify-center h-screen px-4 bg-white">
       <div className="w-full h-full max-w-md mt-[3rem]">
         {/* Back Button and Header */}
         <div className="flex items-center space-x-2">

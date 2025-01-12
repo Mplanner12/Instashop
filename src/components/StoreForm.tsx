@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Loader from "@/utils/Loader";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const StoreForm = () => {
   const [loading, setLoading] = useState(false);
@@ -12,6 +12,7 @@ const StoreForm = () => {
   const [category, setCategory] = useState("");
   const [logo, setLogo] = useState<File | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -19,35 +20,38 @@ const StoreForm = () => {
     }
   };
 
+  useEffect(() => {
+    setIsFormValid(
+      storeName !== "" &&
+        storeTagName !== "" &&
+        storePhoneNumber !== "" &&
+        storeEmail !== "" &&
+        category !== ""
+    );
+  }, [storeName, storeTagName, storePhoneNumber, storeEmail, category]);
+
   const handleSubmit = () => {
-    if (
-      !storeName ||
-      !storeTagName ||
-      !storePhoneNumber ||
-      !storeEmail ||
-      !category
-    ) {
+    if (!isFormValid) {
       setErrorMessage("All fields are required.");
       return;
+    } else {
+      setLoading(true);
+      setTimeout(() => {
+        localStorage.setItem(
+          "storeFormData",
+          JSON.stringify({
+            storeName,
+            storeTagName,
+            storePhoneNumber,
+            storeEmail,
+            category,
+          })
+        );
+        setLoading(false);
+        window.location.href = "/create-product";
+      }, 500);
     }
-    setLoading(true);
-    setTimeout(() => {
-      localStorage.setItem(
-        "storeFormData",
-        JSON.stringify({
-          storeName,
-          storeTagName,
-          storePhoneNumber,
-          storeEmail,
-          category,
-        })
-      );
-      setLoading(false);
-      window.location.href = "/create-product";
-    }, 500);
-    // Storing values in local storage
   };
-
   return (
     <div className="flex items-center justify-center h-screen px-4 bg-white">
       <div className="w-full h-full max-w-md mt-[4.5rem]">
@@ -122,15 +126,14 @@ const StoreForm = () => {
             <p className="mt-2 text-sm text-red-500">{errorMessage}</p>
           )}
 
-          <div className="relative top-[11rem] w-full h-full flex justify-center items-center">
-            <Link
-              href={"/create-product"}
+          <div className="relative top-[3rem] w-full h-full flex justify-center items-center">
+            <button
               className="w-full px-4 py-3 mt-8 text-white text-center bg-[#8A226F] rounded-full hover:bg-purple-700 focus:ring-2 focus:ring-[#8A226F] focus:outline-none"
               type="button"
               onClick={handleSubmit}
             >
               {loading ? <Loader /> : "Continue"}
-            </Link>
+            </button>
           </div>
         </div>
       </div>

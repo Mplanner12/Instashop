@@ -28,7 +28,7 @@ const InfoForm = ({ nextStage }: { nextStage: () => void }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen px-4 bg-white">
+    <div className="flex items-center justify-center h-screen px-4 bg-white lg:border lg:shadow-lg">
       <div className="w-full h-full max-w-md mt-[0rem]">
         {/* Form Section */}
         <div className="mt-8">
@@ -92,7 +92,7 @@ const InfoForm = ({ nextStage }: { nextStage: () => void }) => {
           )}
 
           <button
-            className="w-full px-4 py-3 mt-8 relative top-[15rem] text-white bg-[#8A226F] rounded-full hover:bg-purple-700 focus:ring-2 focus:ring-[#8A226F] focus:outline-none"
+            className="w-full px-4 py-3 mt-8 relative top-[11.5rem] text-white bg-[#8A226F] rounded-full hover:bg-purple-700 focus:ring-2 focus:ring-[#8A226F] focus:outline-none"
             type="button"
             onClick={handleSubmit}
           >

@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import Loader from "@/utils/Loader";
-import Link from "next/link";
-import { BiArrowToRight } from "react-icons/bi";
+// import Link from "next/link";
+// import { BiArrowToRight } from "react-icons/bi";
 
 const Page: React.FC = () => {
   const [loading, setLoading] = useState(false);
-  const createdProducts = localStorage.getItem("shippingOptions");
+  // const createdProducts = localStorage.getItem("shippingOptions");
   const handleClick = () => {
     setLoading(true);
     setTimeout(() => {
@@ -64,7 +64,7 @@ const Page: React.FC = () => {
 
           {/* Button */}
           <div className="mt-6 w-full h-full flex flex-col justify-start items-center relative bottom-[0.5rem]">
-            {createdProducts != null ? (
+            {/* {createdProducts != null ? (
               <Link
                 href="/product-list"
                 className="flex items-center gap-2 mb-1.5"
@@ -78,7 +78,7 @@ const Page: React.FC = () => {
               </Link>
             ) : (
               ""
-            )}
+            )} */}
             <button
               onClick={handleClick}
               className="w-full flex justify-center items-center bg-[#8A226F] text-white py-3 rounded-full shadow-sm hover:bg-pink-800 transition shadow-[#8A226F]"
